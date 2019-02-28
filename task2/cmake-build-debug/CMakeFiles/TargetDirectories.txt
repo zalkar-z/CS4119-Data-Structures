@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/Bennington College/term2/Data Structures C++/Lab1/task2/cmake-build-debug/CMakeFiles/task2.dir
+C:/Users/User/Desktop/Bennington College/term2/Data Structures C++/Lab1/task2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/Desktop/Bennington College/term2/Data Structures C++/Lab1/task2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

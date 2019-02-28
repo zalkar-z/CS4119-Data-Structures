@@ -1,0 +1,3 @@
+/home/zalkar/Data Structures C++/Lab1/task0/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zalkar/Data Structures C++/Lab1/task0/cmake-build-debug/CMakeFiles/task0.dir
+/home/zalkar/Data Structures C++/Lab1/task0/cmake-build-debug/CMakeFiles/edit_cache.dir

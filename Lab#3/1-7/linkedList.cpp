@@ -9,6 +9,7 @@
 */
 
 #include <iostream>
+#include <typeinfo>
 
 using namespace std;
 
@@ -21,62 +22,104 @@ struct node {
     }
 };
 
-void listGenerate(node *start);
 void listPrint(node *start);
-void addToEnd(node **startingPoint, node *newNode);
+void addToEnd(node *currentPoint, node *newNode);
+void addToBeginning(node *startingPoint, node *newNode);
+void addAtIndex(node *startingPoint, int index, node *nodeToAdd);
+int getListSize(node *start);
 
 int main() {
 
     node *start = new node(1, NULL); // creates an initial point of the list
 
-//    listGenerate(start); // generates a basic linked list
-//    listPrint(start); // prints all items in a list
+     addToEnd(start, new node(2, NULL));
+     addToEnd(start, new node(3, NULL));
+     addToEnd(start, new node(4, NULL));
+     addToEnd(start, new node(5, NULL));
 
-    node *test = NULL;
-    addToEnd(&test, new node(939, NULL));
+     node *newStart = new node(0, NULL);
+     addToBeginning(start, newStart);
 
-    cout << "YAY" << test->value << endl;
+     start = newStart;
 
 
+     listPrint(start);
+
+     cout << getListSize(start) << endl;
 
 
     return 0;
 }
 
-void listGenerate(node *start) { // generates a linked list [1, 2, 3, 4, 5] for a convenience of tasks in this Lab
-    node *current = start;
-
-    for (int c = 2; c <= 5; c++) {
-        current->next = new node(c, NULL);
-        current = current->next;
-    }
-}
-
-void listPrint(node *start) {
-    node *current = start;
+// prints a linked list with an appropriate index information
+void listPrint(node *startPoint) {
     int index = 0;
 
     while(true) {
-        cout << "List item #" << index << " = " << current->value << endl;
-        if (current->next == NULL) break; // checks the variable for NULL before assigning it to the current variable
-        current = current->next;
+        cout << "List item #" << index << " = " << startPoint->value << endl;
+        if (startPoint->next == NULL) break; // checks the variable for NULL before assigning it to the current variable
+        startPoint = startPoint->next;
         index++;
     }
 }
 
-// use pointers to pointers
-void addToEnd(node **startingPoint, node *newNode) {
-    node **current = startingPoint;
 
-    if (*current == NULL) {
-        *current = new node(newNode->value, NULL);
+// return the size of a linked list
+int getListSize(node *startPoint) {
+    int size = 0;
+
+    while(true) {
+        size++;
+        if (startPoint->next == NULL) break;
+        startPoint = startPoint->next;
+    }
+
+    return size;
+}
+
+
+// adds newNode to the end of current linked list
+void addToEnd(node *currentPoint, node *newNode) {
+
+    if (currentPoint == NULL) {
+        currentPoint = new node(newNode->value, NULL);
     } else {
         while(true) {
-            if (*current->next == NULL) {
-                *current->next = newNode;
+            if (currentPoint->next == NULL) {
+                currentPoint->next = newNode;
                 break;
             }
-            current = current->next;
+            currentPoint = currentPoint->next;
         }
     }
+}
+
+
+// adds newNode to the beginning of the linked list [before startingPoint]
+void addToBeginning(node *startingPoint, node *newNode) {
+    newNode->next = startingPoint;
+}
+
+
+// adds newNode to a particular index in an existing linked list
+void addAtIndex(node *startingPoint, int index, node *nodeToAdd) {
+    int listSize = getListSize(startingPoint);
+
+    // if the index is out of list's range return "-1" as an error
+    if (index < 0 || index >= listSize) return;
+
+    int currentIndex = 0;
+
+    while(true) {
+        if (currentIndex == index) {
+            nodeToAdd->next = startingPoint->next;
+            startingPoint->next = nodeToAdd;
+        }
+        if (startingPoint->next == NULL) break;
+
+        startingPoint = startingPoint->next;
+        currentIndex++;
+    }
+
+
 }

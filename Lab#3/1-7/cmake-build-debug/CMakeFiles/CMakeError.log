@@ -1,26 +1,20 @@
 Detecting C [-std=c11] compiler features failed to compile with the following output:
-Change Dir: C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/Lab#3/1-7/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/zalkar/Desktop/Data_Structures/Lab#3/1-7/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_28216/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_28216.dir\build.make CMakeFiles/cmTC_28216.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/Lab#3/1-7/cmake-build-debug/CMakeFiles/CMakeTmp'
-mingw32-make.exe[1]: Leaving directory 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/Lab#3/1-7/cmake-build-debug/CMakeFiles/CMakeTmp'
-mingw32-make.exe[1]: *** No rule to make target 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/Lab', needed by 'CMakeFiles/cmTC_28216.dir/feature_tests.c.obj'.  Stop.
-Makefile:120: recipe for target 'cmTC_28216/fast' failed
-mingw32-make.exe: *** [cmTC_28216/fast] Error 2
+Run Build Command:"/usr/bin/make" "cmTC_2afd1/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_2afd1.dir/build.make CMakeFiles/cmTC_2afd1.dir/build
+make[1]: *** No rule to make target `/Users/zalkar/Desktop/Data_Structures/Lab', needed by `CMakeFiles/cmTC_2afd1.dir/feature_tests.c.o'.  Stop.
+make: *** [cmTC_2afd1/fast] Error 2
 
 
 
 Detecting CXX [-std=c++1z] compiler features failed to compile with the following output:
-Change Dir: C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/Lab#3/1-7/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /Users/zalkar/Desktop/Data_Structures/Lab#3/1-7/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_fee7f/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_fee7f.dir\build.make CMakeFiles/cmTC_fee7f.dir/build
-mingw32-make.exe[1]: Entering directory 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/Lab#3/1-7/cmake-build-debug/CMakeFiles/CMakeTmp'
-mingw32-make.exe[1]: Leaving directory 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/Lab#3/1-7/cmake-build-debug/CMakeFiles/CMakeTmp'
-mingw32-make.exe[1]: *** No rule to make target 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/Lab', needed by 'CMakeFiles/cmTC_fee7f.dir/feature_tests.cxx.obj'.  Stop.
-Makefile:120: recipe for target 'cmTC_fee7f/fast' failed
-mingw32-make.exe: *** [cmTC_fee7f/fast] Error 2
+Run Build Command:"/usr/bin/make" "cmTC_af83c/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_af83c.dir/build.make CMakeFiles/cmTC_af83c.dir/build
+make[1]: *** No rule to make target `/Users/zalkar/Desktop/Data_Structures/Lab', needed by `CMakeFiles/cmTC_af83c.dir/feature_tests.cxx.o'.  Stop.
+make: *** [cmTC_af83c/fast] Error 2
 
 
 

@@ -9,7 +9,6 @@
 */
 
 #include <iostream>
-#include <typeinfo>
 
 using namespace std;
 
@@ -22,104 +21,80 @@ struct node {
     }
 };
 
-void listPrint(node *start);
-void addToEnd(node *currentPoint, node *newNode);
-void addToBeginning(node *startingPoint, node *newNode);
-void addAtIndex(node *startingPoint, int index, node *nodeToAdd);
-int getListSize(node *start);
+void printList(node *);
+int getListSize(node *);
+void addToEnd(node **, node *);
+void addToBeginning(node **, node *);
+void addAtIndex(node *, node *, int);
+
 
 int main() {
 
-    node *start = new node(1, NULL); // creates an initial point of the list
+    node *start = new node(1, new node(2, new node(3, NULL))); // creates an initial point of the list
 
-     addToEnd(start, new node(2, NULL));
-     addToEnd(start, new node(3, NULL));
-     addToEnd(start, new node(4, NULL));
-     addToEnd(start, new node(5, NULL));
+    addToEnd(&start, new node(4, NULL));
+    addToBeginning(&start, new node(0, NULL));
 
-     node *newStart = new node(0, NULL);
-     addToBeginning(start, newStart);
-
-     start = newStart;
-
-
-     listPrint(start);
-
-     cout << getListSize(start) << endl;
-
+    printList(start);
+    cout << getListSize(start) << endl;
 
     return 0;
 }
 
-// prints a linked list with an appropriate index information
-void listPrint(node *startPoint) {
+// prints the provided linked list with indexes
+// defensive for NULL parameter
+void printList(node *start) {
+    node *current = start;
     int index = 0;
 
-    while(true) {
-        cout << "List item #" << index << " = " << startPoint->value << endl;
-        if (startPoint->next == NULL) break; // checks the variable for NULL before assigning it to the current variable
-        startPoint = startPoint->next;
+    while(current != NULL) {
+        cout << "List item #" << index << " = " << current->value << endl;
+        current = current->next;
         index++;
     }
 }
 
-
-// return the size of a linked list
-int getListSize(node *startPoint) {
+// returns the size of provided linked list
+// defensive for NULL parameter
+int getListSize(node *start) {
+    node *current = start;
     int size = 0;
 
-    while(true) {
+    while(current != NULL) {
         size++;
-        if (startPoint->next == NULL) break;
-        startPoint = startPoint->next;
+        current = current->next;
     }
-
     return size;
 }
 
+// adds a provided node to the end of the provided list
+// defensive for both parameters in case of NULL
+void addToEnd(node **start, node *newNode) {
+    // returns nothing if newNode is NULL
+    if (newNode == NULL) return;
 
-// adds newNode to the end of current linked list
-void addToEnd(node *currentPoint, node *newNode) {
-
-    if (currentPoint == NULL) {
-        currentPoint = new node(newNode->value, NULL);
+    // checks if the start is NULL
+    if (*start == NULL) {
+        *start = newNode;
     } else {
-        while(true) {
-            if (currentPoint->next == NULL) {
-                currentPoint->next = newNode;
-                break;
-            }
-            currentPoint = currentPoint->next;
+        node *current = *start;
+
+        while (current->next != NULL) {
+            current = current->next;
         }
+        // at this point, we are at the end of the list, so we append a newNode
+        current->next = newNode;
     }
 }
 
+// adds a provided node to the beginning of the provided list
+// defensive for both parameters in case of NULL
+void addToBeginning(node **start, node *newNode) {
+    // returns nothing if newNode is NULL
+    if (newNode == NULL) return;
 
-// adds newNode to the beginning of the linked list [before startingPoint]
-void addToBeginning(node *startingPoint, node *newNode) {
-    newNode->next = startingPoint;
+    newNode->next = *start;
+    *start = newNode;
 }
 
 
-// adds newNode to a particular index in an existing linked list
-void addAtIndex(node *startingPoint, int index, node *nodeToAdd) {
-    int listSize = getListSize(startingPoint);
-
-    // if the index is out of list's range return "-1" as an error
-    if (index < 0 || index >= listSize) return;
-
-    int currentIndex = 0;
-
-    while(true) {
-        if (currentIndex == index) {
-            nodeToAdd->next = startingPoint->next;
-            startingPoint->next = nodeToAdd;
-        }
-        if (startingPoint->next == NULL) break;
-
-        startingPoint = startingPoint->next;
-        currentIndex++;
-    }
-
-
-}

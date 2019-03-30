@@ -1,0 +1,20 @@
+Detecting C [-std=c11] compiler features failed to compile with the following output:
+Change Dir: /Users/zalkar/Desktop/Data_Structures/Lab#3/linkedList/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_24606/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_24606.dir/build.make CMakeFiles/cmTC_24606.dir/build
+make[1]: *** No rule to make target `/Users/zalkar/Desktop/Data_Structures/Lab', needed by `CMakeFiles/cmTC_24606.dir/feature_tests.c.o'.  Stop.
+make: *** [cmTC_24606/fast] Error 2
+
+
+
+Detecting CXX [-std=c++1z] compiler features failed to compile with the following output:
+Change Dir: /Users/zalkar/Desktop/Data_Structures/Lab#3/linkedList/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_89233/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_89233.dir/build.make CMakeFiles/cmTC_89233.dir/build
+make[1]: *** No rule to make target `/Users/zalkar/Desktop/Data_Structures/Lab', needed by `CMakeFiles/cmTC_89233.dir/feature_tests.cxx.o'.  Stop.
+make: *** [cmTC_89233/fast] Error 2
+
+
+

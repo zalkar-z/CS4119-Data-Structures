@@ -5,30 +5,9 @@
 */
 
 #include <iostream>
+#include "doublyLinkedList.h"
 
 using namespace std;
-
-struct node {
-    int value;
-    node *prev;
-    node *next;
-    node(int v, node *p, node *n) {
-        value = v;
-        prev = p;
-        next = n;
-    }
-};
-
-void printList(node *);
-void printReversedList(node *);
-void addToEnd(node **, node *);
-void addToBeginning(node **, node *);
-void addAtIndex(node *, node *, int);
-int removeByValue(node **, int);
-void removeAtStart(node **);
-void removeAtEnd(node *);
-node* findByValue(node *, int);
-int listSize(node *);
 
 
 int main() {
@@ -48,8 +27,8 @@ int main() {
     cout << "-----" << endl;
     printReversedList(ll);
 
-    // Task 1: Add a node to the end of a linked list
-    cout << "TASK 1: Add to End of Linked List" << endl;
+    // Task 1: Add to the end of a linked list
+    cout << "TASK 1: Add 4 to the end of Linked List" << endl;
     node *newNode = new node(4, NULL, NULL);
     addToEnd(&ll, newNode);
 
@@ -58,7 +37,7 @@ int main() {
     printReversedList(ll);
 
     // Task 2: Add a node to the beginning of a linked list
-    cout << "TASK 2: Add to Start of Linked List Using **" << endl;
+    cout << "TASK 2: Add 0 to the start of Linked List Using **" << endl;
     newNode = new node(0, NULL, NULL);
     addToBeginning(&ll, newNode);
 
@@ -68,7 +47,7 @@ int main() {
 
 
     // Task 3: Add a node after a given 0-based index
-    cout << "TASK 3 : Add at a given index" << endl;
+    cout << "TASK 3 : Add 1 after index #0" << endl;
     newNode = new node(1, NULL, NULL);
     addAtIndex(ll, newNode, 0);
 
@@ -78,7 +57,7 @@ int main() {
 
 
     // Task 4: Remove by value
-    cout << "TASK 4 : Remove by a given value" << endl;
+    cout << "TASK 4 : Remove all apperances of 2" << endl;
     int numRemoved = removeByValue(&ll, 2);
     cout << numRemoved << endl;
 
@@ -103,7 +82,7 @@ int main() {
     printReversedList(ll);
 
     // Task 7: Find by value
-    cout << "TASK 7 : Find node by value" << endl;
+    cout << "TASK 7 : Find value 3 and return the address" << endl;
     node* node1 = findByValue(ll, 3);
     cout << node1 << endl;
 

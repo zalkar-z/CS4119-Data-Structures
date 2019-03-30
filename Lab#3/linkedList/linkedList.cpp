@@ -5,27 +5,9 @@
 */
 
 #include <iostream>
+#include "linkedList.h"
 
 using namespace std;
-
-struct node {
-    int value;
-    node *next;
-    node(int v, node *n) {
-        value = v;
-        next = n;
-    }
-};
-
-void printList(node *);
-void addToEnd(node **, node *);
-void addToBeginning(node **, node *);
-void addAtIndex(node *, node *, int);
-int removeByValue(node **, int);
-void removeAtStart(node **);
-void removeAtEnd(node *);
-node* findByValue(node *, int);
-int listSize(node *);
 
 
 int main() {
@@ -36,25 +18,25 @@ int main() {
     printList(ll);
 
     // Task 1: Add a node to the end of a linked list
-    cout << "TASK 1: Add to End of Linked List" << endl;
+    cout << "TASK 1: Add 4 to End of Linked List" << endl;
     node *newNode = new node(4, NULL);
     addToEnd(&ll, newNode);
     printList(ll);
 
     // Task 2: Add a node to the beginning of a linked list
-    cout << "TASK 2: Add to Start of Linked List Using **" << endl;
+    cout << "TASK 2: Add -1 to Start of Linked List Using **" << endl;
     newNode = new node(-1, NULL);
     addToBeginning(&ll, newNode);
     printList(ll);
 
     // Task 3: Add a node after a given 0-based index
-    cout << "TASK 3 : Add at a given index" << endl;
+    cout << "TASK 3 : Add 0 at after index#0" << endl;
     newNode = new node(0, NULL);
     addAtIndex(ll, newNode, 0);
     printList(ll);
 
     // Task 4: Remove by value
-    cout << "TASK 4 : Remove by a given value" << endl;
+    cout << "TASK 4 : Remove all appearances of 2" << endl;
     int numRemoved = removeByValue(&ll, 2);
     cout << numRemoved << endl;
     printList(ll);
@@ -70,7 +52,7 @@ int main() {
     printList(ll);
 
     // Task 7: Find by value
-    cout << "TASK 7 : Find node by value" << endl;
+    cout << "TASK 7 : Find the first position of 3 and return the address" << endl;
     node* node1 = findByValue(ll, 3);
     cout << node1 << endl;
     printList(ll);

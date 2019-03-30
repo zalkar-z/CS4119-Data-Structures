@@ -3,4 +3,4 @@ project(circularLinkedList)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(circularLinkedList circularLinkedList.cpp)
+add_executable(circularLinkedList circularLinkedList.cpp circularLinkedList.h)

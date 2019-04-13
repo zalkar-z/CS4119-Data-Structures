@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Task_0.dir/doublyLinkedList.cpp.obj"
+  "CMakeFiles/Task_0.dir/doublyLinkedList.cpp.o"
   "Task_0.pdb"
-  "Task_0.exe"
-  "Task_0.exe.manifest"
-  "libTask_0.dll.a"
+  "Task_0"
 )
 
 # Per-language clean rules from dependency scanning.

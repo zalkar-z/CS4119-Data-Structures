@@ -1,3 +1,9 @@
+/*
+* linkedList.cpp - Tree#1 Task#0 - Singularly linked lists
+* Author: Zak Ziiaidin uulu (zalkar@bennington.edu)
+* Date: 4/16/2019
+*/
+
 #include <iostream>
 #include "linkedList.h"
 

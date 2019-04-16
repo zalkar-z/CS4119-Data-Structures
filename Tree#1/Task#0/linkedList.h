@@ -1,5 +1,5 @@
 //
-// Created by User on 4/16/2019.
+// Created by Zalkar on 4/16/2019.
 //
 
 #ifndef TASK_0_LINKEDLIST_H

@@ -1,0 +1,20 @@
+Detecting C [-std=c11] compiler features failed to compile with the following output:
+Change Dir: /Users/zalkar/Desktop/DSC++/My_Git/Lab#4/Task#0/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0e570/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_0e570.dir/build.make CMakeFiles/cmTC_0e570.dir/build
+make[1]: *** No rule to make target `/Users/zalkar/Desktop/DSC++/My_Git/Lab', needed by `CMakeFiles/cmTC_0e570.dir/feature_tests.c.o'.  Stop.
+make: *** [cmTC_0e570/fast] Error 2
+
+
+
+Detecting CXX [-std=c++1z] compiler features failed to compile with the following output:
+Change Dir: /Users/zalkar/Desktop/DSC++/My_Git/Lab#4/Task#0/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e4282/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_e4282.dir/build.make CMakeFiles/cmTC_e4282.dir/build
+make[1]: *** No rule to make target `/Users/zalkar/Desktop/DSC++/My_Git/Lab', needed by `CMakeFiles/cmTC_e4282.dir/feature_tests.cxx.o'.  Stop.
+make: *** [cmTC_e4282/fast] Error 2
+
+
+

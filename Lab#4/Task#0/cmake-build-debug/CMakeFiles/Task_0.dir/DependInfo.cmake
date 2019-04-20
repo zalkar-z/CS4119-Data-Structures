@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/Lab#4/Task#0/doublyLinkedList.cpp" "C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/Lab#4/Task#0/cmake-build-debug/CMakeFiles/Task_0.dir/doublyLinkedList.cpp.obj"
+  "/Users/zalkar/Desktop/DSC++/My_Git/Lab#4/Task#0/doublyLinkedList.cpp" "/Users/zalkar/Desktop/DSC++/My_Git/Lab#4/Task#0/cmake-build-debug/CMakeFiles/Task_0.dir/doublyLinkedList.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

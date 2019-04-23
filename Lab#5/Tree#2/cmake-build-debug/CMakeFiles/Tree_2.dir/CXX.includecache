@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/MyGit/Lab#5/Tree#2/bintree.cpp
+iostream
+-
+fstream
+-
+string
+-
+

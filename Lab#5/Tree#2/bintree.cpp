@@ -68,14 +68,17 @@ public:
         myFile.close(); // don't forget to close the file, once done :)
     }
 
+    // calls a private function with the same name
     void inOrder() {
         inOrder(root);
     }
 
+    // calls a private function with the same name
     void preOrder() {
         preOrder(root);
     }
 
+    // calls a private function with the same name
     void postOrder() {
         postOrder(root);
     }

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zalkar/Desktop/DSC++/My_Git/Lab#4/Task#1/doublyLinkedList.h
+stack.h
+/Users/zalkar/Desktop/DSC++/My_Git/Lab#4/Task#1/stack.h
+
+/Users/zalkar/Desktop/DSC++/My_Git/Lab#4/Task#1/main.cpp
+iostream
+-
+stack.h
+/Users/zalkar/Desktop/DSC++/My_Git/Lab#4/Task#1/stack.h
+doublyLinkedList.h
+/Users/zalkar/Desktop/DSC++/My_Git/Lab#4/Task#1/doublyLinkedList.h
+
+/Users/zalkar/Desktop/DSC++/My_Git/Lab#4/Task#1/stack.h
+

@@ -27,6 +27,13 @@ private:
 
     TreeNode* root;     // the root of our binary search tree
 
+    void inOrder(TreeNode *root) {
+        if (root == nullptr) return ;
+        inOrder(root->left);
+        cout << root->data << endl;
+        inOrder(root->right);
+    }
+
 public:
     BinarySearchTree() {
         // our constructor is pretty lamecore
@@ -68,7 +75,52 @@ public:
         return 1;
     }
 
+    // calls a private function with the same name
+    void inOrder() {
+        inOrder(root);
+    }
 
+    /*
+     * removeValue
+     * Deletes a given value from the BST if found
+     * Returns: 0 if the value was not found and consequently wasn't deleted
+     *          1 if the value was found and successfully deleted
+     */
+    int removeValue(Item value) {
+        if (root == NULL) {
+            return 0;      // return that the value was not found
+        }
+        // searching for a value here
+        TreeNode* curr = root;
+        TreeNode* parent = nullptr;
+        while (value != curr->data) {
+            if (value < curr->data) {   // try left
+                if (curr->left == NULL) {
+                    return 0;       // return that the value was not found
+                }
+                parent = curr; // remembering parent
+                curr = curr->left;
+            }
+            else {                      // try right
+                if (curr->right == NULL) {
+                    return 0;       // return that the value was not found
+                }
+                parent = curr; // remembering parent
+                curr = curr->right;
+            }
+        }
+        // if the function didn't return yet, then we have the value in our BST, and it is curr->data
+
+        // Case#1 - It is a leaf
+        if (curr->left == nullptr && curr->right == nullptr) {
+            // check if it has a parent and delete the link accordingly
+            if (parent && parent->left == curr) parent->left = nullptr;
+            if (parent && parent->right == curr) parent->right = nullptr;
+            // delete the node with a given value
+            delete curr;
+        }
+
+    }
 };
 
 
@@ -91,7 +143,7 @@ int main() {
     }
 
     // uncomment this once you have an inOrder traversal in place.  behold the magic.
-    //bst->inOrder();
+    bst->inOrder();
 
     return 0;
 }

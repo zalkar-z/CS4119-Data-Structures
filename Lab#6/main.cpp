@@ -37,7 +37,7 @@ private:
 public:
     BinarySearchTree() {
         // our constructor is pretty lamecore
-        root = NULL;
+        root = nullptr;
     }
 
     /*
@@ -47,9 +47,9 @@ public:
      *          1 if the value was found!
      */
     int findOrInsert(Item value) {
-        TreeNode* pTn = new TreeNode(value, NULL, NULL);
+        TreeNode* pTn = new TreeNode(value, nullptr, nullptr);
 
-        if (root == NULL) {
+        if (root == nullptr) {
             root = pTn;     // there's nothing in the tree so set the root to this new node
             return 0;      // return that the value was not found and instead inserted
         }
@@ -57,14 +57,14 @@ public:
         TreeNode* curr = root;
         while (value != curr->data) {
             if (value < curr->data) {   // try left
-                if (curr->left == NULL) {
+                if (curr->left == nullptr) {
                     curr->left = pTn;   // there was nothing there so this is the place to insert our value!
                     return 0;       // return that the value was not found and instead inserted (left subtree, here)
                 }
                 curr = curr->left;
             }
             else {                      // try right
-                if (curr->right == NULL) {
+                if (curr->right == nullptr) {
                     curr->right = pTn;  // there was nothing there so this is the place to insert our value!
                     return 0;       // return that the value was not found and instead inserted (right subtree, here)
                 }
@@ -87,7 +87,7 @@ public:
      *          1 if the value was found and successfully deleted
      */
     int removeValue(Item value) {
-        if (root == NULL) {
+        if (root == nullptr) {
             return 0;      // return that the value was not found
         }
         // searching for a value here
@@ -95,14 +95,14 @@ public:
         TreeNode* parent = nullptr;
         while (value != curr->data) {
             if (value < curr->data) {   // try left
-                if (curr->left == NULL) {
+                if (curr->left == nullptr) {
                     return 0;       // return that the value was not found
                 }
                 parent = curr; // remembering parent
                 curr = curr->left;
             }
             else {                      // try right
-                if (curr->right == NULL) {
+                if (curr->right == nullptr) {
                     return 0;       // return that the value was not found
                 }
                 parent = curr; // remembering parent

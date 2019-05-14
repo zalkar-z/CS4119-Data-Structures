@@ -195,5 +195,11 @@ int main() {
     // uncomment this once you have an inOrder traversal in place.  behold the magic.
     bst->inOrder();
 
+    cout << "Enter a character to delete: " << endl;
+    cin >> inValue;
+
+    cout << bst->removeValue(inValue) << endl;
+    bst->inOrder();
+
     return 0;
 }

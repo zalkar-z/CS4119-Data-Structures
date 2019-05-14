@@ -111,13 +111,26 @@ public:
         }
         // if the function didn't return yet, then we have the value in our BST, and it is curr->data
 
-        // Case#1 - It is a leaf
+        // Case#1 - current is a leaf
         if (curr->left == nullptr && curr->right == nullptr) {
             // check if it has a parent and delete the link accordingly
             if (parent && parent->left == curr) parent->left = nullptr;
             if (parent && parent->right == curr) parent->right = nullptr;
             // delete the node with a given value
             delete curr;
+            // return 1, which means that the value was found and successfully deleted
+            return 1;
+        }
+
+        // Case#2 - current has only left subtree
+        if (curr->right == nullptr) {
+            // check the side its parent comes from and skip the curr in the link chain
+            if (parent && parent->left == curr) parent->left = curr->left;
+            if (parent && parent->right == curr) parent->right = curr->left;
+            // delete the node with a given value
+            delete curr;
+            // return 1, which means that the value was found and successfully deleted
+            return 1;
         }
 
     }

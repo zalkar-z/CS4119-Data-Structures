@@ -170,6 +170,8 @@ public:
 
         // finally, we delete "curr"
         delete curr;
+
+        return 1;
     }
 };
 

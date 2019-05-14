@@ -1,0 +1,26 @@
+Detecting C [-std=c11] compiler features failed to compile with the following output:
+Change Dir: C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/MyGit/Lab#6/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_18535/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_18535.dir\build.make CMakeFiles/cmTC_18535.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/MyGit/Lab#6/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe[1]: Leaving directory 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/MyGit/Lab#6/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe[1]: *** No rule to make target 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/MyGit/Lab', needed by 'CMakeFiles/cmTC_18535.dir/feature_tests.c.obj'.  Stop.
+Makefile:120: recipe for target 'cmTC_18535/fast' failed
+mingw32-make.exe: *** [cmTC_18535/fast] Error 2
+
+
+
+Detecting CXX [-std=c++1z] compiler features failed to compile with the following output:
+Change Dir: C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/MyGit/Lab#6/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_4c476/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_4c476.dir\build.make CMakeFiles/cmTC_4c476.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/MyGit/Lab#6/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe[1]: Leaving directory 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/MyGit/Lab#6/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe[1]: *** No rule to make target 'C:/Users/User/Desktop/Bennington College/term2/Data_Structures_C++/MyGit/Lab', needed by 'CMakeFiles/cmTC_4c476.dir/feature_tests.cxx.obj'.  Stop.
+Makefile:120: recipe for target 'cmTC_4c476/fast' failed
+mingw32-make.exe: *** [cmTC_4c476/fast] Error 2
+
+
+

@@ -133,6 +133,19 @@ public:
             return 1;
         }
 
+        // Case#3 - current has only right subtree
+        if (curr->left == nullptr) {
+            // check the side its parent comes from and skip the curr in the link chain
+            if (parent && parent->left == curr) parent->left = curr->right;
+            if (parent && parent->right == curr) parent->right = curr->right;
+            // delete the node with a given value
+            delete curr;
+            // return 1, which means that the value was found and successfully deleted
+            return 1;
+        }
+
+
+
     }
 };
 

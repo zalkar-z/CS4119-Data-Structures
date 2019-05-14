@@ -144,8 +144,32 @@ public:
             return 1;
         }
 
+        // Case#4 - current has both subtrees
+        // first, we should find a value right next to curr in inOrder sequence
+        TreeNode* next = curr->right;
+        // We'll also need next's parent
+        TreeNode* parentOfNext = curr->right;
+        // now we go left as much as possible
+        while (next->left) {
+            parentOfNext = next; // save parent value
+            next = next->left; // proceed
+        } // by the end of this loop, we will have a value which stands right next to curr in inOrder sequence
 
+        // since "next" has no left subtree, we will set up its left link to the left subtree of "curr"
+        next->left = curr->left;
 
+        // here we set "parentOfNext"'s left pointer to "next"'s right node
+        parentOfNext->left = next->right;
+
+        // finally, we will set the right link of "next" to point to the right subtree of "curr"
+        next->right = curr->right;
+
+        // we set "parent" to point to "next" instead of "curr", we should consider the direction from which parent comes from
+        if (parent && parent->left == curr) parent->left = next;
+        if (parent && parent->right == curr) parent->right = next;
+
+        // finally, we delete "curr"
+        delete curr;
     }
 };
 

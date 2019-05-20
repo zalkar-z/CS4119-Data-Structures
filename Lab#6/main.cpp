@@ -34,6 +34,14 @@ private:
         inOrder(root->right);
     }
 
+    void visualize(TreeNode *root, int indentation = 0) {
+        // print indentation
+        for (int i = 0; i < indentation; i++) cout << " ";
+
+        // print value
+        cout << root->data << endl;
+    }
+
 public:
     BinarySearchTree() {
         // our constructor is pretty lamecore
@@ -172,6 +180,10 @@ public:
         delete curr;
 
         return 1;
+    }
+
+    void visualize(TreeNode* root, int indentation = 0) {
+        visualize(root);
     }
 };
 

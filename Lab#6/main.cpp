@@ -34,12 +34,17 @@ private:
         inOrder(root->right);
     }
 
-    void visualize(TreeNode *root, int indentation = 0) {
+    void visualize(TreeNode *root, int indentation, string prefix) {
+        if (!root) return ;
+
         // print indentation
         for (int i = 0; i < indentation; i++) cout << " ";
 
         // print value
-        cout << root->data << endl;
+        cout << prefix << ":" << root->data << endl;
+
+        visualize(root->left, indentation + 4, "L");
+        visualize(root->right, indentation + 4, "R");
     }
 
 public:
@@ -182,8 +187,8 @@ public:
         return 1;
     }
 
-    void visualize(TreeNode* root, int indentation = 0) {
-        visualize(root);
+    void visualize() {
+        visualize(root, 0, "");
     }
 };
 
@@ -206,14 +211,16 @@ int main() {
         cin >> inValue;
     }
 
-    // uncomment this once you have an inOrder traversal in place.  behold the magic.
-    bst->inOrder();
+    bst->visualize();
 
+    // uncomment this once you have an inOrder traversal in place.  behold the magic.
+//    bst->inOrder();
+//
     cout << "Enter a character to delete: " << endl;
     cin >> inValue;
 
     cout << bst->removeValue(inValue) << endl;
-    bst->inOrder();
+    bst->visualize();
 
     return 0;
 }

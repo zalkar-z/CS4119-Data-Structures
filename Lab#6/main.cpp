@@ -119,10 +119,6 @@ private:
             // it is the same as the minimum value in root's right subtree
             TreeNode* temp = minValueNode(root->right);
 
-            cout << "TESTING: " << endl;
-            cout << root->data << endl;
-            cout << temp->data << endl;
-
             // assign values
             root->data = temp->data;
 
